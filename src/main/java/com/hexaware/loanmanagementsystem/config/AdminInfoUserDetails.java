@@ -1,15 +1,18 @@
 package com.hexaware.loanmanagementsystem.config;
 
 import java.util.Arrays;
+
 import java.util.Collection;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.hexaware.loanmanagementsystem.entity.AdminDetails;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.hexaware.loanmanagementsystem.entity.AdminDetails;
+
 
 @SuppressWarnings("serial")
 public class AdminInfoUserDetails implements UserDetails {
@@ -17,6 +20,7 @@ public class AdminInfoUserDetails implements UserDetails {
     private String name;
     private String password;
     private List<GrantedAuthority> authorities;
+
 
     public AdminInfoUserDetails(AdminDetails adminInfo) {
         name=adminInfo.getAdminUsername();
